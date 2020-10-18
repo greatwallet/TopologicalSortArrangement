@@ -1,8 +1,11 @@
 #include <iostream>
 #include "DiGraph.h"
+#include "algo_v.h"
+#include <string>
 using namespace std;
 
 #define FILE_NAME "DAG.txt"
+constexpr auto FILE_NAME_V = "algo_v.txt";
 int main()
 {
 	// Create a graph given in the above diagram 
@@ -13,7 +16,7 @@ int main()
 	//g.addEdge(4, 1);
 	//g.addEdge(2, 3);
 	//g.addEdge(3, 1);
-	DiGraph g(FILE_NAME);
+	//DiGraph g(FILE_NAME);
 
 
 	cout << "All Topological sorts Recursively\n";
@@ -33,5 +36,11 @@ int main()
 			cout << e << " ";
 		cout << endl;
 	}
+	
+	// method 2 for using algorithm V
+	// algo_v V(FILE_NAME_V);
+	// V.all_topological_sorts_K();
+	// V.show_result();
 	return 0;
+
 }
