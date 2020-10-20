@@ -1,6 +1,5 @@
 #include "DiGraph.h"
 #include <fstream>
-#include <map>
 using namespace std;
 
 #define MAX(a, b) (a > b ? a : b)
@@ -64,21 +63,23 @@ DiGraph::DiGraph(int V)
 DiGraph::DiGraph(const string & fname)
 {
 	ifstream fin(fname);
-	// map<int, int> nodeCount;
-	int max_id = -1;
+	//int max_id = -1;
 	int left, right;
-	while (fin >> left >> right)
-	{
-		if (MAX(left, right) > max_id)
-			max_id = MAX(left, right);
-	}
-	V = max_id + 1;
+	//while (fin >> left >> right)
+	//{
+	//	if (MAX(left, right) > max_id)
+	//		max_id = MAX(left, right);
+	//}
+	//V = max_id + 1;
+	int n_nodes;
+	fin >> n_nodes;
+	V = n_nodes;
 	adj = new list<int>[V];
 	// Initialising all indegree with 0 
 	for (int i = 0; i < V; i++)
 		indegree.push_back(0);
-	fin.clear();
-	fin.seekg(ios::beg);
+	//fin.clear();
+	//fin.seekg(ios::beg);
 	while (fin >> left >> right)
 	{
 		addEdge(left, right);
