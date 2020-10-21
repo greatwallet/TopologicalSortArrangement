@@ -56,13 +56,15 @@ int main()
 	//}
 	
 	// method 2 for using algorithm V
-	 algo_v V(FILE_NAME);
-	 tic = chrono::high_resolution_clock::now();
-	 V.all_topological_sorts_K();
-	 // V.show_result();
-	 toc = std::chrono::high_resolution_clock::now();
-	 elapsed_time = chrono::duration<double>(toc - tic).count();
-	 cout << "[V] Time Cost = " << fixed << setprecision(5) << elapsed_time << "s" << endl;
+	algo_v V(FILE_NAME);
+	tic = chrono::high_resolution_clock::now();
+	V.all_topological_sorts_K();
+	// V.show_result();
+	toc = std::chrono::high_resolution_clock::now();
+	elapsed_time = chrono::duration<double>(toc - tic).count();
+	cout << "[V] Time Cost = " << fixed << setprecision(5) << elapsed_time << "s" << endl;
+	 
+	// experiment on certain topological sorts in source algorithm
     test("DAG_08.txt","result_14.txt",SJTOrder,7);
 	return 0;
 
