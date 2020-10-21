@@ -40,7 +40,8 @@ bool algo_v::in_tp(int _b, int _e) {
 
 void algo_v::print(vector<int> const& input) {
     for (unsigned int i = 0; i < input.size(); i++) {
-        cout << input.at(i) << ' ';
+		// change from 1-indexed to 0-indexed
+        cout << input.at(i) - 1 << ' ';
     }
     cout << endl;
 }
