@@ -130,6 +130,7 @@
   <ItemGroup>
     <ClInclude Include="algo_v.h" />
     <ClInclude Include="DiGraph.h" />
+    <ClInclude Include="sort_four.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

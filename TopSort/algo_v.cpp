@@ -13,7 +13,7 @@ algo_v::algo_v(const string& fname)
     int left, right;
     while (fin >> left >> right)
     {
-        tp con_{ left + 1, right + 1};
+        tp con_{ left + 1, right + 1 };
         this->cons.push_back(con_);
     }
     fin.close();

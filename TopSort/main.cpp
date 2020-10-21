@@ -39,27 +39,21 @@ int main()
 		return -1;
 	}
 
-	//for (auto const& sort : sort_list) {
-	//	for (auto const& e : sort) 
-	//		cout << e << " ";
-	//	cout << endl;
-	//}
+	for (auto const& sort : sort_list) {
+		for (auto const& e : sort) 
+			cout << e << " ";
+		cout << endl;
+	}
 	toc = std::chrono::high_resolution_clock::now();
 	elapsed_time = chrono::duration<double>(toc - tic).count();
 	cout << "[K] Time Cost = " << fixed << setprecision(5) << elapsed_time << "s" << endl;
 	cout << sort_list.size() << endl;
-
-	//for (auto const& sort : sort_list) {
-	//	for (auto const& e : sort) 
-	//		cout << e << " ";
-	//	cout << endl;
-	//}
 	
 	// method 2 for using algorithm V
 	 algo_v V(FILE_NAME);
 	 tic = chrono::high_resolution_clock::now();
 	 V.all_topological_sorts_K();
-	 // V.show_result();
+	 V.show_result();
 	 toc = std::chrono::high_resolution_clock::now();
 	 elapsed_time = chrono::duration<double>(toc - tic).count();
 	 cout << "[V] Time Cost = " << fixed << setprecision(5) << elapsed_time << "s" << endl;
