@@ -3,6 +3,7 @@
 #include <chrono>
 #include "DiGraph.h"
 #include "algo_v.h"
+#include "sort_four.h"
 #include <string>
 using namespace std;
 
@@ -62,7 +63,7 @@ int main()
 	 toc = std::chrono::high_resolution_clock::now();
 	 elapsed_time = chrono::duration<double>(toc - tic).count();
 	 cout << "[V] Time Cost = " << fixed << setprecision(5) << elapsed_time << "s" << endl;
-
+    test("DAG_08.txt","result_14.txt",SJTOrder,7);
 	return 0;
 
 }
