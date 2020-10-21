@@ -63,7 +63,7 @@ void test(const string& inputFile,const string& outputFile,string (*pfun)(string
 result文件夹中，result_11.txt到result_14.txt分别为拓扑约束满足DAG_less.txt中的约束时满足拓扑排序的序列在整个排列中的分布，result_21.txt到result_24.txt分别为拓扑约束满足DAG_more.txt中的约束时满足拓扑排序的序列在整个排列中的分布。（1指字典序法，2指递增进位制法，3指递减进位制法，4指邻位对换法），result_11.png到result_24.png为可视化的结果。
 
 测试结果如下：
-![fig2](fig/运行截图zxy.png)
+![fig2](fig/运行截图_zxy.png)
 
 ## 相邻交换法的实现
 
