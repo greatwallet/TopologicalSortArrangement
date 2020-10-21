@@ -62,7 +62,7 @@ int main()
 	 cout << "[V] Time Cost = " << fixed << setprecision(5) << elapsed_time << "s" << endl;
 	 
 	// experiment on certain topological sorts in source algorithm
-    test("DAG_08.txt","result_14.txt",SJTOrder,7);
+    test("DAG_less.txt","result_14.txt",SJTOrder);
 	return 0;
 
 }

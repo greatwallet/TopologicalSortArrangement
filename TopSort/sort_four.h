@@ -370,14 +370,15 @@ bool checkOrder(std::vector<std::pair<int, int>>& compare,const std::string& str
     return succ;
 }
 
-void test(const string& inputFile,const string& outputFile,string (*pfun)(string,int),int str_size = 7)
+void test(const string& inputFile,const string& outputFile,string (*pfun)(string,int))
 {
     //cout << INT32_MAX << endl;
     //实际上用int 的长度就足够了
     std::ifstream input(inputFile);
     std::vector<std::pair<int, int>> compare;
     std::string temp, word1,word2;
-    int i = 0;
+    std::getline(input, temp);
+    int length = std::atoi(temp.c_str());
     while (std::getline(input, temp)) {
         std::istringstream iss(temp);
         iss >> word1;
@@ -388,7 +389,6 @@ void test(const string& inputFile,const string& outputFile,string (*pfun)(string
         compare.push_back(pair<int, int>(less_one, big_one));
         //compare.emplace_back(less_one, big_one);
     }
-    int length = str_size;
     string initial_str(length, '0');
     for (int i = 0; i < length; i++) {
         initial_str[i] = i + '1';

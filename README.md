@@ -18,50 +18,50 @@
 ```
 其中第1行为节点数目`N`，第2至最后一行记录节点之间偏序关系；以`2 3`为例，表示图中包含结构`2 --> 3`，即存在节点`2`指向`3`的边
 
-3. 运行
-输出结果
-以上示例输出结果如下
-![fig1](fig/fig_main_exe.PNG)
+3. 运行，输出结果
+    以上示例输出结果如下（3种拓扑排序方式）
+    ![fig1](fig/fig_main_exe.PNG)
 
 ## 四种全排列算法的实现
 
-
-主要代码在头文件sort_four.h中，该头文件主要包含5个函数，分别是
+主要代码在头文件sort_four.h中，该头文件主要包含5个函数，分别是：
 
 ```c++
 string lexicographicalOrder(string origin, int n);
 ```
 
-返回字典序法下origin往后的第$n$个排列
+返回字典序法下origin往后的第$n$个排列；
 
 ```c++
 string increaseOrder(string origin, int n);
 ```
 
-返回递增进位制法下origin往后的第$n$个排列
+返回递增进位制法下origin往后的第$n$个排列；
 
 ```c++
 string decreaseOrder(string origin, int n);
 ```
 
-返回递减进位制法下origin往后的第$n$个排列
+返回递减进位制法下origin往后的第$n$个排列；
 
 ```c++
 string SJTOrder(string origin, int n);
 ```
 
-返回邻位对换法下origin往后的第$n$个排列
+返回邻位对换法下origin往后的第$n$个排列；
 
 ```c++
-void test(const string& inputFile,const string& outputFile,string (*pfun)(string,int),int str_size = 7)
+void test(const string& inputFile,const string& outputFile,string (*pfun)(string,int));
 ```
 
-其中inputFile为输入文本文件（拓扑排序的约束），outputFile为输出文本文件（在某种全排列生成算法下满足拓扑排序的序列在整个序列中的分布）,pfun为选择的全排列生成算法（字典序法、递增进位制法、递减进位制法、邻位对换法），str_size为待排列的元素个数
+其中inputFile为输入文本文件（拓扑排序的约束），outputFile为输出文本文件（在某种全排列生成算法下满足拓扑排序的序列在整个序列中的分布）,pfun为选择的全排列生成算法（字典序法、递增进位制法、递减进位制法、邻位对换法）。
 
 
 
-result文件夹中，result_11.txt到result_14.txt分别为拓扑约束满足DAG-08.txt中的约束时满足拓扑排序的序列在整个排列中的分布，result_21.txt到result_24.txt分别为拓扑约束满足DAG-03.txt中的约束时满足拓扑排序的序列在整个排列中的分布。（1指字典序法，2指递增进位制法，3指递减进位制法，4指邻位对换法），result_11.png到result_24.png为可视化的结果
+result文件夹中，result_11.txt到result_14.txt分别为拓扑约束满足DAG_less.txt中的约束时满足拓扑排序的序列在整个排列中的分布，result_21.txt到result_24.txt分别为拓扑约束满足DAG_more.txt中的约束时满足拓扑排序的序列在整个排列中的分布。（1指字典序法，2指递增进位制法，3指递减进位制法，4指邻位对换法），result_11.png到result_24.png为可视化的结果。
 
+测试结果如下：
+![fig2](fig/运行截图zxy.png)
 
 ## 相邻交换法的实现
 
