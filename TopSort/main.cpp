@@ -52,7 +52,7 @@ int main()
 	cout << endl;
 	
 	// method 2 for using algorithm V
-	cout << "All Topological sorts_K\n";
+	cout << "All Topological sorts_V\n";
 	 algo_v V(FILE_NAME);
 	 tic = chrono::high_resolution_clock::now();
 	 V.all_topological_sorts_K();
